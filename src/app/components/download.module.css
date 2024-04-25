@@ -1,0 +1,12 @@
+.display_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.card{
+    text-align: center;
+    cursor: pointer;
+}
+.frames {
+    overflow: hidden;
+  }

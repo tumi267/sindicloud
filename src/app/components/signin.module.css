@@ -1,0 +1,36 @@
+.btn{
+    height: 50px;
+    width: 100px;
+    border-radius: 15%;
+    margin-top: 15px;
+    border: 0.5px solid black;
+    box-shadow: 10px 10px 50px ;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(249, 246, 238);
+    font-size: larger ;
+    font-weight: 400;
+}
+.btn:hover{
+    height: 50px;
+    width: 100px;
+    border-radius: 15%;
+    margin-top: 15px;
+    border: 0.5px solid black;
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+         
+
+ 
+.inputBar{
+    height: 60px;
+    width: 80%;
+    margin-bottom: 10px;
+}
