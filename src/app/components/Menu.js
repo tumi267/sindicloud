@@ -2,11 +2,21 @@
 import { getAuth, signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { UserState } from "../context/context";
+
 import styles from './Menu.module.css'
+import { useEffect } from "react";
 function Menu({opetions}) {
     const router=useRouter()
     const auth = getAuth();
-    const {setUser}=UserState()
+    const {user,setUser}=UserState()
+
+    useEffect(()=>{
+      if(user!==null){
+        return
+      }else{
+      router.push('/')
+      }
+    },[])
   return (
     <div>
         <ul className={styles.content}>

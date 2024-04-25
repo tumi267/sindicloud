@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import styles from './signin.module.css'
 import db from '../db/firebase/db'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { UserState } from "../context/context";
 function Singin() {
     const router =useRouter()

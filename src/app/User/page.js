@@ -6,21 +6,11 @@ import SindiFile from "../components/SindiFiles"
 import UploadAudio from "../components/UploadAudio"
 import DownloadFile from "../components/DownloadFile"
 import Menu from "../components/Menu"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import styles from './user.module.css'
-import { UserState } from "../context/context"
-import { useRouter } from "next/navigation"
-function page() {
+function Page() {
   const [option,setOption]=useState('image')
-  const {user}=UserState()
-  const router=useRouter()
-  useEffect(()=>{
-    if(user!==null){
-      return
-    }else{
-    router.push('/')
-    }
-  },[])
+
   return (
     <div>
         <h1>Hello My Sindi</h1>
@@ -53,4 +43,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
