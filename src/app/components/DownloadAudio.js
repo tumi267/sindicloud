@@ -8,7 +8,7 @@ function DownloadAudio() {
     const storage = getStorage();
     const listRef=(ref(storage, 'audio/'))
     const [imagelist,setImageList]=useState([])
-    UseEffect(()=>{
+    useEffect(()=>{
         const getlist=async()=>{
             const fileList = await listAll(listRef);
             const fileUrls = await Promise.all(fileList.items.map(async (item) => {
