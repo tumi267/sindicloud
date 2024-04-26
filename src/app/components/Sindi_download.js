@@ -21,10 +21,10 @@ function Sindi_download() {
      
        getlist()
     },[])
-    
+    let host = process.env.NEXT_PUBLIC_host === 'prod' ? 'https://sindicloud.vercel.app/api/getImage' : 'http://localhost:3000/api/getImage'
     const downImage=async(url)=>{
         
-    const response = fetch('http://localhost:3000/api/getImage',{
+    const response = fetch(host,{
         method:'POST',
         body: JSON.stringify({ url: url })
     });
