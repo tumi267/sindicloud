@@ -22,7 +22,7 @@ function DownloadFile() {
      
        getlist()
     },[])
-    let host = process.env.NEXT_PUBLIC_host === 'prod' ? 'https://sindicloud.vercel.app/api/download' : 'http://localhost:3000/api/download'    
+    let host = `${process.env.NEXT_PUBLIC_host}` === 'prod' ? 'https://sindicloud.vercel.app/api/download' : 'http://localhost:3000/api/download'    
 
     const downLoadFile=async(url,name)=>{
         const response = fetch(host,{
